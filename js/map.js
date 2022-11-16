@@ -15,8 +15,7 @@ mapQuestsBtnWrapper.addEventListener('click',  (e)=> {
 
         element.classList.add('map-btn-active')
         
-        mapCollection.forEach((el)=>{
-            // console.log(el.getAttribute('data-map-id') )
+        mapCollection.forEach((el)=>{   
             el.getAttribute('data-map-id') === btnId 
             ? el.classList.add('map-active')
             : el.classList.remove('map-active')

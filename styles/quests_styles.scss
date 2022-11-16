@@ -218,6 +218,18 @@ h2, h3 {
 }
 
   }
+
+  @media screen and (max-width: 58rem) { 
+    .banner {
+    background-image: url(../Image/banner-ad-tablet.jpg);
+   }
+  }
+  
+  @media screen and (max-width: 32rem) { 
+    .banner {
+    background-image: url(../Image//banner-ad-mobile.jpg);
+   }
+  }
     // -------------SECTION ABOUT------------------
     .about {.section-header{
       border-top: none;
@@ -440,6 +452,18 @@ h2, h3 {
             font-size: $font-size-button;
             line-height: $line-height-second; 
             color: inherit;
+            margin-top: 2px;
+            }
+
+            span::before {
+              content: '';         
+              visibility: hidden;       
+              display: block;
+              position: absolute;
+              padding-top: 2px;        
+              text-align: center;
+              width: 100%;
+              height: 100%;               
             }
             
             &:hover, &:focus {               
@@ -491,12 +515,49 @@ h2, h3 {
         color: rgba(248, 18, 18, 0.89);
 
         span {
+          position: relative;           
+          visibility: hidden;
+          border: none;
+        }
+
+        span::before {
+          content: 'бронь';         
+          visibility: visible;   
+          color: rgba(248, 18, 18, 0.89);
           border-top: 1px solid rgba(248, 18, 18, 0.89);         
-          }
+        }
 
         &:hover, &:focus {
           background: none;
           color: rgba(248, 18, 18, 0.89);        
+        }
+        
+        &::before,
+        &::after{ 
+          visibility: hidden;
+        }
+      }
+
+      .closed {
+        background: transparent;
+        border: rgb(177, 169, 169) solid 1px; 
+        color: rgb(177, 169, 169);
+
+        span {
+          position: relative;           
+          visibility: hidden;
+        }
+
+        span::before {
+          content: 'закрыто';        
+          visibility: visible; 
+          color: rgb(177, 169, 169);
+          border-top: 1px solid rgb(177, 169, 169);         
+        }
+
+        &:hover, &:focus {
+          background: none;
+          color: rgb(177, 169, 169);        
         }
         
         &::before,

@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "header_styles.scss";
+@import "fonts.scss";
 
 *{
   box-sizing: border-box;
@@ -54,7 +55,7 @@ h4 {
   font-size: $font-size-h4;
 }
  
-  li {font-size: $font-size-h4;
+  li, p {font-size: $font-size-h4;
     text-align: justify;
 }
   

@@ -11,9 +11,6 @@ button.addEventListener('click',()=>{
        banner.classList.toggle('menu-active')}
    catch{}
    wrapper.classList.toggle('menu-active')
-    
-   
-    
  })
 
 navigationWrapper.addEventListener('click',(e)=>{ 

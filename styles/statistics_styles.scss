@@ -1,5 +1,5 @@
 // ----------------- SECTION STATISTICS------------------
-
+@import "variables.scss";
   
   .statistics {
   padding-top: clamp(1.5rem,3.5vw,3rem); 
@@ -30,8 +30,7 @@
       background-color: $background-color-yellow;
       height: clamp(7rem,13vw,10rem);
       width:clamp(7rem,13vw,10rem);
-      padding: clamp(1.5rem,3vw,2.25rem);
-      
+      padding: clamp(1.5rem,3vw,2.25rem);      
    }
   
     &__item-img svg{
@@ -44,10 +43,17 @@
       text-transform: uppercase;
       text-align: center;
     }
+
     &__item-value{ 
       text-transform: uppercase;
       text-align: center;
       font-size: calc($font-size-h3-0.5rem);
+      
+    }
+
+    &__item-value span{ 
+        font-family: 'Umbrage', $font-family-base, $font-family-second;
+        font-size: $font-size-h4;
     }
   }
  

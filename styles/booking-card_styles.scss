@@ -48,11 +48,16 @@
         padding: $font-size-button;  
         background-color: $background-color-yellow;
 
-        h3, h4,p {
+        h3, h4, p {
             margin: clamp(0.6rem,1vw,0.8rem) 0;
             text-transform: uppercase;
             color: $font-color-dark-h;
             line-height: $line-height-second;
+        }
+
+        #game-date {
+            color:red;
+            font-weight: 700;
         }
     }
 
@@ -118,13 +123,22 @@
         flex-direction: column;       
         padding: $padding-menu $font-size-button;
         background-color: $background-color-base;     
+          
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover, 
+      input:-webkit-autofill:focus, 
+      input:-webkit-autofill:active  {
+        box-shadow: inset 20px 20px 0px 20px #363634;        
+        -webkit-text-fill-color: $font-color-base;
+}
 
-        input, textarea {            
+        input, textarea {       
             width: 100%;
             max-width: 100%;                 
             padding: clamp(0.3rem,0.2vw,0.5rem);            
             background-color: transparent;           
             color:$font-color-base;
+            font-family: $font-family-p, $font-family-base;
             line-height: $line-height-second;
             border-radius: 0.5rem;  
         }
@@ -221,8 +235,6 @@
                 background-color: transparent;
             }            
             }
-
-
         }
 
     &__checkbox {
@@ -237,11 +249,8 @@
            a {
                color: $font-color-yellow;
            }
-        }
-         
-    }
-
-        
+        }         
+    }        
 
         &__btn-wrapper {
                 display: flex;
@@ -302,8 +311,6 @@
 }
 
 .booking-active {
-    // overflow: auto;
-    // min-height: 100%;
     top: 0;  
     transition: all 0.3s ease-in-out;
 }

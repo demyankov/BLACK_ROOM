@@ -220,11 +220,10 @@ li {
         }
 
         @media screen and (max-width: 58rem) and (orientation: landscape) {
-         .margin-top {
+            .margin-top {
               margin-top: clamp(3rem, 7vw,12rem);
         }
-         
-        &_btn-margin {  
+                 &_btn-margin {  
           margin-top: clamp(3rem,8vw,6rem);               
         }
 
@@ -233,7 +232,8 @@ li {
       }
 
 
-        }
+        }        
+        
 
         .light {
             position: absolute;
@@ -311,6 +311,17 @@ li {
         }
 }
 
+@media screen and (max-width: 58rem) { 
+  .banner {
+  background-image: url(../Image/banner1_desktop.jpg);
+ }
+}
+
+@media screen and (max-width: 32rem) { 
+  .banner {
+  background-image: url(../Image/banner1_mobile.jpg);
+ }
+}
 // ----------------- SECTION ABOUT-QUESTS------------------
 
 .about-quests {
@@ -582,6 +593,10 @@ li {
       display: flex;
       justify-content: space-between;
       gap: $font-size-h3;
+
+      .section-feedback_flex {
+        overflow: hidden;
+      }
     }
          
     .feedback {
@@ -623,7 +638,6 @@ li {
     }
 
     &__submit {
-      // margin-top: $font-size-h3;
       width: 60%;
       background: $background-color-header;
       outline-color: $font-color-dark-h;
@@ -671,7 +685,7 @@ li {
     justify-content: center;
     align-items: center;
     max-width: 45vw;
-    height: 100%; 
+    height: 100%;     
 
       .map-item, iframe{
         height: 100%; 
@@ -716,67 +730,11 @@ li {
 }
 
 
-//  .booking__times-item {
-//           position: relative;
-//             background: $background-color-yellow;
-//             border: none;
-//             border-radius: 0.5rem;
-//             line-height: 1.6;
-//             padding: 0;
-//             padding: clamp(0.3rem,0.6vw,0.5rem);         
-//             text-align: center;
-//             font-size: $font-size-h4;
-//             font-weight: 700;
-//             color:$font-color-dark-h;
-
-//             span {
-//             display: block;
-//             border-top: 1px solid $font-color-dark-h;
-//             font-size: $font-size-button;
-//             color: inherit;
-//             }
-            
-//             &:hover, &:focus {               
-//                 color: $background-color-yellow;
-//                 background: transparent;
-//                 box-shadow:none;
-            
-//                  span {
-//                     border-top-color: inherit;     
-//                     color: inherit;
-//                   }       
-//             }
-            
-//             &::before,
-//             &::after{
-//               content:'';
-//               position:absolute;
-//               top:0;
-//               right:0;
-//               height:1px;           
-//               width:0;
-//               background:$background-color-yellow;
-//                box-shadow:
-//                 -1px -1px 5px 0px #fff,
-//                 7px 7px 20px 0px #0003,
-//                 4px 4px 5px 0px #0002;
-//               transition:400ms ease all;
-//             }
-
-//             &::after{
-//                right:inherit;
-//               top:inherit;
-//                left:0;
-//               bottom:0;
-//             }
-            
-//             &:hover::before,
-//             &:hover::after,
-//             &:focus::before,
-//             &:focus::after{
-//                width:100%;
-//                transition:800ms ease all;
-//             }   
-//           } }    
-
-
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+ 
+img[data-src] {
+  opacity: 0;
+}
